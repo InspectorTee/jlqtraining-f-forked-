@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JLQ Computer Training</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img
+            src="https://i.postimg.cc/3x3tjtQs/Photoroom-20250927-114740.png"
+            alt="JLQ Logo"
+            class="logo"
+          />
+          <h1>
+            JLQ Enterprise and Trading <br />
+            <div class="head">Computer Training</div>
+          </h1>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Empowering Communities Through Computer Training</h1>
+        <p>
+          We provide quality and affordable computer skills training for
+          schools, businesses, and individuals.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content">
+      <h2>About Us</h2>
+      <p>
+        JLQ Enterprise and Trading (Pty) Ltd, founded in 2021 in Nigel, provides
+        <strong>quality computer skills training</strong> to communities,
+        schools, and tertiary institutions.
+      </p>
+      <p>
+        Our <strong>mission</strong> is to shape the future by equipping people
+        with practical computer knowledge. Our <strong>vision</strong> is to
+        empower communities across South Africa through modern, relevant, and
+        accessible training.
+      </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content">
+      <h2>Our Portfolio</h2>
+
+      <h3>What We Do</h3>
+      <ul>
+        <li>Accredited computer skills training</li>
+        <li>
+          Courses in typing, Microsoft Office, internet, and basic IT skills
+        </li>
+        <li>Hands-on practice for schools, businesses, and individuals</li>
+      </ul>
+
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>✔ Quality and reliable training</li>
+        <li>✔ Job-ready practical skills</li>
+        <li>✔ Affordable programs</li>
+        <li>✔ Friendly, experienced trainers</li>
+      </ul>
+
+      <h3>Our Growth Plan</h3>
+      <p>
+        We aim to expand training to all 9 provinces in South Africa, partner
+        with schools, government, and businesses, and launch
+        <strong>virtual training programs</strong> to reach wider audiences.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you! Please fill out the form below or reach us
+        directly.
+      </p>
+
+      <form class="contact-form">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+        <div class="contact-actions">
+          <button type="submit">Send Message</button>
+          <button type="reset" class="btn-secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; +27 (78) 835 - 9919 <br />
+        +27 (27) 61 283 5317 | 66 Laver Road, Nigel 1490
+      </p>
+    </footer>
+
+    <!-- JS for hamburger + smooth scroll -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-links a");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("show");
+      });
+
+      // Smooth scroll
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>
